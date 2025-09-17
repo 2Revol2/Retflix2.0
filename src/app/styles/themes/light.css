@@ -1,5 +1,5 @@
 .app_light_theme {
-  --bg-color: #ffffff; /* Основной фон */
+  --bg-color: #fff; /* Основной фон */
   --secondary-bg-color: #f9f9fb; /* Второстепенный фон, карточки, панели */
   --primary-color: #1c1c1c; /* Основной текст */
   --secondary-color: #ff6f61; /* Акценты, кнопки, ссылки */
