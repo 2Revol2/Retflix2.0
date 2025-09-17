@@ -1,5 +1,6 @@
 import { dirname } from "path";
 import { fileURLToPath } from "url";
+import storybook from "eslint-plugin-storybook";
 import { FlatCompat } from "@eslint/eslintrc";
 import typescriptPlugin from "@typescript-eslint/eslint-plugin";
 import eslintConfigPrettier from "eslint-config-prettier";
@@ -38,6 +39,7 @@ const eslintConfig = [
       "prettier/prettier": ["error", { endOfLine: "auto" }],
 
       // imports
+      "import/namespace": "off",
       "unused-imports/no-unused-imports": "error",
       "unused-imports/no-unused-vars": [
         "warn",
@@ -73,6 +75,7 @@ const eslintConfig = [
   {
     ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts"],
   },
+  ...storybook.configs["flat/recommended"],
 ];
 
 export default eslintConfig;
