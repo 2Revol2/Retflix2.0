@@ -1,0 +1,10 @@
+.app_dark_theme {
+  --bg-color: #121212; /* Основной фон */
+  --secondary-bg-color: #1e1e1e; /* Второстепенный фон */
+  --primary-color: #e0e0e0; /* Основной текст */
+  --secondary-color: #ff8a65; /* Акценты, кнопки, ссылки */
+  --hover-color: #2a2a2a;
+  --border-color: #2e2e2e;
+  --skeleton-color: #2c2c2c;
+  --skeleton-shadow: #1a1a1a;
+}

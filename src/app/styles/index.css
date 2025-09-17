@@ -1,0 +1,9 @@
+@import url("./reset.css");
+@import url("./themes/dark.css");
+@import url("./themes/light.css");
+
+.app {
+  color: var(--primary-color);
+  background: var(--bg-color);
+  min-height: 100vh;
+}

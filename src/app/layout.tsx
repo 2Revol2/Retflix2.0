@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import "./globals.css";
-
+import "./styles/index.css";
+import { ThemeProvider } from "./providers/ThemeProvider";
+import { classNames } from "@/shared/lib/classNames/classNames";
 
 const poppins = Poppins({
   variable: "--font-poppins",
-  weight: ["400", "500", "600"]
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -20,8 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable}`}>
-        {children}
+      <body className={classNames("", {}, [poppins.variable])}>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
