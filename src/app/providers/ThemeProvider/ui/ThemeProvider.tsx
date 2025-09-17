@@ -1,7 +1,8 @@
 "use client";
-import { ReactNode, useEffect, useMemo, useState } from "react";
-import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from "../lib/ThemeContext";
+import type { ReactNode } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { classNames } from "@/shared/lib/classNames/classNames";
+import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from "../lib/ThemeContext";
 
 interface ThemeProviderProps {
   children: ReactNode;
