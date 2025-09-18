@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import "./styles/index.css";
+import { Header } from "@/widgets/Header";
 import { ThemeProvider } from "./providers/ThemeProvider";
 
 const poppins = Poppins({
@@ -22,7 +23,10 @@ const RootLayout = ({
   return (
     <html lang="en">
       <body className={classNames("", {}, [poppins.variable])}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

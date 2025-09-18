@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint && npx stylelint  \"**/*.css\"",
+    "lint": "npx eslint \"**/*.{ts,tsx}\" && npx stylelint  \"**/*.css\"",
     "prepare": "husky",
     "storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "next": "15.5.3",
+    "radix-ui": "^1.4.3",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },

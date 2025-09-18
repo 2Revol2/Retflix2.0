@@ -1,0 +1,44 @@
+.navigation {
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  right: 0;
+  background-color: var(--secondary-bg-color);
+  border: 1px solid var(--border-color);
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trigger {
+  background: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+
+  &:hover {
+    background-color: var(--hover-color);
+    color: var(--secondary-color);
+  }
+}
+
+.menuList {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.link {
+  padding: 8px 12px;
+  border-radius: 8px;
+
+
+  &:hover {
+    background-color: var(--hover-color);
+    color: var(--secondary-color);
+  }
+}
