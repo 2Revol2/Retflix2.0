@@ -1,6 +1,8 @@
 {
   "HomePage": {
-    "title": "Привет Мир"
+    "Duration": "Длительность",
+    "minutes": "минут",
+    "Watch": "Смотреть"
   },
   "Header": {
     "films": "Фильмы",

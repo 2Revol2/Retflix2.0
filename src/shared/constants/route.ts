@@ -18,8 +18,8 @@ export enum AppRoutes {
 
 export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: "/",
-  [AppRoutes.ACTOR_DETAILS]: "/actor/:id",
-  [AppRoutes.MOVIE_DETAILS]: "/movie/:id",
+  [AppRoutes.ACTOR_DETAILS]: "/actor/",
+  [AppRoutes.MOVIE_DETAILS]: "/movie/",
   [AppRoutes.POPULAR_FILMS]: "/collections/TOP_POPULAR_MOVIES",
   [AppRoutes.TOP_250]: "/collections/TOP_250_MOVIES",
   [AppRoutes.VAMPIRE]: "/collections/VAMPIRE_THEME",

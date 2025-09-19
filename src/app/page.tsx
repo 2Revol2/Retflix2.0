@@ -1,15 +1,22 @@
-import { getTranslations } from "next-intl/server";
-import { MonthsArray } from "@/shared/constants/months";
-// import { getMoviesPremieres } from "@/shared/api/axios/MoviesApi/api";
+import { getMoviesPremieres, PremieresItem, MonthsArray } from "@/entities/Premieres";
+import { Carousel } from "@/widgets/Carousel";
+import s from "./home.module.css";
 
 const Home = async () => {
-  const t = await getTranslations("HomePage");
   const dateNow = new Date();
   const month = MonthsArray[dateNow.getMonth()];
   const year = dateNow.getFullYear();
-  // const { items: MoviesPremieres } = await getMoviesPremieres(year, month);
+  const { items: moviesPremieres } = await getMoviesPremieres(year, month);
 
-  return <div>{t("title")}</div>;
+  return (
+    <div>
+      <Carousel className={s.carousel} lazy>
+        {moviesPremieres.map((premier) => (
+          <PremieresItem key={premier.kinopoiskId} premier={premier} />
+        ))}
+      </Carousel>
+    </div>
+  );
 };
 
 export default Home;

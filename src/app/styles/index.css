@@ -7,3 +7,7 @@
   background: var(--bg-color);
   min-height: 100vh;
 }
+
+.container {
+  padding: 10px 15px;
+}

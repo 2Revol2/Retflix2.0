@@ -1,6 +1,8 @@
 {
   "HomePage": {
-    "title": "Hello World"
+    "Duration": "Duration",
+    "minutes": "minutes",
+    "Watch": "Watch"
   },
   "Header": {
     "films": "Movies",
