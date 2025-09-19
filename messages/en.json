@@ -1,0 +1,20 @@
+{
+  "HomePage": {
+    "title": "Hello World"
+  },
+  "Header": {
+    "films": "Movies",
+    "serials": "TV Shows",
+    "cartoons": "Cartoons",
+    "popular_films": "Popular Movies",
+    "popular_serials": "Popular TV Shows",
+    "top_250": "Top 250 Movies",
+    "vampire": "Vampires",
+    "comics": "Comics",
+    "family": "Family",
+    "romantic": "Romance",
+    "zombie": "Zombies",
+    "catastrophe": "Disasters",
+    "more": "More"
+  }
+}

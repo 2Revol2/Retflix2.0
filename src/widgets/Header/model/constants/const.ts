@@ -2,54 +2,54 @@ import { RoutePath } from "@/shared/constants/route";
 
 export const NavbarSection = [
   {
-    title: "Фильмы",
+    title: "films",
     url: RoutePath.films,
   },
   {
-    title: "Сериалы",
+    title: "serials",
     url: RoutePath.serials,
   },
   {
-    title: "Мультфильмы",
+    title: "cartoons",
     url: RoutePath.cartoons,
   },
 ];
 
 export const NavbarCategories = [
   {
-    title: "Популярные фильмы",
+    title: "popular_films",
     url: RoutePath.popular_films,
   },
   {
-    title: "Популярные сериалы",
+    title: "popular_serials",
     url: RoutePath.poppular_serials,
   },
   {
-    title: "Топ 250 фильмов",
+    title: "top_250",
     url: RoutePath.top_250,
   },
   {
-    title: "Вампиры",
+    title: "vampire",
     url: RoutePath.vampire,
   },
   {
-    title: "Комиксы",
+    title: "comics",
     url: RoutePath.comics,
   },
   {
-    title: "Семейный",
+    title: "family",
     url: RoutePath.family,
   },
   {
-    title: "Романтика",
+    title: "romantic",
     url: RoutePath.romantic,
   },
   {
-    title: "Зомби",
+    title: "zombie",
     url: RoutePath.zombie,
   },
   {
-    title: "Катастрофы",
+    title: "catastrophe",
     url: RoutePath.catastrophe,
   },
 ];
