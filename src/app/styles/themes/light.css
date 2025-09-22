@@ -1,10 +1,13 @@
 .app_light_theme {
-  --bg-color: #fff; /* Основной фон */
-  --secondary-bg-color: #f9f9fb; /* Второстепенный фон, карточки, панели */
-  --primary-color: #1c1c1c; /* Основной текст */
-  --secondary-color: #ff6f61; /* Акценты, кнопки, ссылки */
-  --hover-color: #ffecec;
-  --border-color: #e2e2e5;
-  --skeleton-color: #e5e5e7;
-  --skeleton-shadow: #cfcfd1;
+  --background-color: #fff;
+  --secondary-background-color: #f5f5f5;
+  --icon-background-color: #eaeaea;
+  --text-color: #1a1a1a;
+  --title-color: #000;
+  --border-color: #c0c0c0;
+  --movie-card-bg-color: #f9f9f9;
+  --hover-color: #e50914;
+  --logo-color: #ffd700;
+  --scrollbar-thumb-color: #bbb;
+  --scrollbar-track-color: #f0f0f0;
 }

@@ -5,7 +5,9 @@ import { getLocale, getMessages } from "next-intl/server";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import "./styles/index.css";
 import { Header } from "@/widgets/Header";
+import { Sidebar } from "@/widgets/Sidebar";
 import { ThemeProvider } from "./providers/ThemeProvider";
+import StoreProvider from "./providers/StoreProvider/ui/StoreProvider";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -28,10 +30,15 @@ const RootLayout = async ({
     <html lang="en">
       <body className={classNames("", {}, [poppins.variable])}>
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <ThemeProvider>
-            <Header />
-            {children}
-          </ThemeProvider>
+          <StoreProvider>
+            <ThemeProvider>
+              <Header />
+              <div className="content_wrapper">
+                <Sidebar />
+                <div className={"content"}>{children}</div>
+              </div>
+            </ThemeProvider>
+          </StoreProvider>
         </NextIntlClientProvider>
       </body>
     </html>
