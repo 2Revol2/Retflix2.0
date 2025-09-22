@@ -1,6 +1,6 @@
 .siderbar {
   background-color: var(--secondary-background-color);
-  height: calc(100vh - var(--navbar-height));
+  min-height: calc(100vh - var(--navbar-height));
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   width: var(--sidebar-closed-width);

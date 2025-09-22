@@ -17,5 +17,6 @@
 .content {
   flex: 1;
   background-color: var(--secondary-background-color);
+  overflow-x: hidden;
+  padding: 10px 30px;
 }
-

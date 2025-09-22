@@ -1,0 +1,30 @@
+.carousel {
+  margin: 0 auto;
+  max-width: 1580px;
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  max-width: 240px;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (width <= 1100px) {
+  .image {
+    max-width: 200px;
+  }
+}
+
+@media (width <= 768px) {
+  .image {
+    max-width: 240px;
+  }
+}
+
+@media (width <= 500px) {
+  .image {
+    max-width: 100%;
+  }
+}
