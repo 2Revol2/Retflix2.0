@@ -5,7 +5,7 @@ export interface ToggleSidebarState {
 }
 
 const initialState: ToggleSidebarState = {
-  isOpen: true,
+  isOpen: false,
 };
 
 export const toggleSidebarSlice = createSlice({

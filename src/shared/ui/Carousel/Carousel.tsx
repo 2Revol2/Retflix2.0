@@ -19,7 +19,7 @@ export const Carousel = (props: CarouselProps) => {
 
   return (
     <Slider
-      className={classNames(s.carousel, {}, [className])}
+      className={classNames("", {}, [className])}
       lazyLoad="ondemand"
       autoplaySpeed={4000}
       autoplay={true}
@@ -48,7 +48,6 @@ export const Carousel = (props: CarouselProps) => {
             slidesToShow: 1,
             autoplay: false,
             centerMode: false,
-            centerPadding: "0px",
           },
         },
       ]}
