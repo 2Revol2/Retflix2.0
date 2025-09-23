@@ -1,8 +1,8 @@
 "use client";
-import Slider from "react-slick";
 import Link from "next/link";
-import { classNames } from "@/shared/lib/classNames/classNames";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import s from "./Carousel.module.css";
+import "@splidejs/react-splide/css";
 
 interface Slide {
   id: number;
@@ -10,53 +10,36 @@ interface Slide {
 }
 
 interface CarouselProps {
-  className?: string;
   slides: Slide[];
 }
 
 export const Carousel = (props: CarouselProps) => {
-  const { className, slides } = props;
+  const { slides } = props;
 
   return (
-    <Slider
-      className={classNames("", {}, [className])}
-      lazyLoad="ondemand"
-      autoplaySpeed={4000}
-      autoplay={true}
-      dots={false}
-      infinite
-      slidesToScroll={1}
-      centerMode={true}
-      centerPadding="20px"
-      slidesToShow={6}
-      responsive={[
-        {
-          breakpoint: 1100,
-          settings: {
-            slidesToShow: 4,
-          },
+    <Splide
+      options={{
+        type: "loop",
+        autoplay: true,
+        interval: 4000,
+        perPage: 6,
+        focus: "center",
+        pagination: false,
+        lazyLoad: "nearby",
+        breakpoints: {
+          1100: { perPage: 4 },
+          768: { perPage: 2 },
+          500: { perPage: 1, autoplay: false, focus: 0 },
         },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 500,
-          settings: {
-            slidesToShow: 1,
-            autoplay: false,
-            centerMode: false,
-          },
-        },
-      ]}
+      }}
     >
       {slides.map((item) => (
-        <Link key={item.id} href={""}>
-          <img src={item.image} className={s.image} />
-        </Link>
+        <SplideSlide key={item.id}>
+          <Link href="">
+            <img src={item.image} className={s.image} />
+          </Link>
+        </SplideSlide>
       ))}
-    </Slider>
+    </Splide>
   );
 };

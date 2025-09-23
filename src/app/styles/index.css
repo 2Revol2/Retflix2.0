@@ -22,10 +22,5 @@
   flex: 1;
   background-color: var(--secondary-background-color);
   overflow: hidden auto;
-  padding: 10px 30px;
-}
-
-.slick-prev::before,
-.slick-next::before {
-  color: var(--text-color) !important;
+  padding: 10px;
 }

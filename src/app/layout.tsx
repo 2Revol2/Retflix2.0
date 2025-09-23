@@ -8,8 +8,6 @@ import { Header } from "@/widgets/Header";
 import { Sidebar } from "@/widgets/Sidebar";
 import { ThemeProvider } from "./providers/ThemeProvider";
 import StoreProvider from "./providers/StoreProvider/ui/StoreProvider";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const poppins = Poppins({
   variable: "--font-poppins",
