@@ -1,4 +1,4 @@
-import { Carousel } from "@/widgets/Carousel";
+import { Carousel } from "@/shared/ui/Carousel/Carousel";
 
 const Home = async () => {
   return (

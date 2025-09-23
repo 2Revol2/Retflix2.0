@@ -20,6 +20,7 @@ export const Carousel = (props: CarouselProps) => {
   return (
     <Slider
       className={classNames(s.carousel, {}, [className])}
+      lazyLoad="ondemand"
       autoplaySpeed={4000}
       autoplay={true}
       dots={false}

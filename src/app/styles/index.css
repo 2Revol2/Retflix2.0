@@ -6,17 +6,26 @@
 .app {
   color: var(--text-color);
   background-color: var(--background-color);
-  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .content_wrapper {
   display: flex;
+  overflow: hidden;
+  flex: 1;
   gap: 24px;
 }
 
 .content {
   flex: 1;
   background-color: var(--secondary-background-color);
-  overflow-x: hidden;
+  overflow: hidden auto;
   padding: 10px 30px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  color: var(--text-color) !important;
 }

@@ -5,8 +5,19 @@
   border-top-right-radius: 5px;
   width: var(--sidebar-closed-width);
   padding: 5px 15px;
+  transition: all 0.2s ease-out;
 }
 
 .isOpen {
   width: var(--sidebar-width);
+}
+
+@media (width <= 500px) {
+  .isOpen {
+    width: 100%;
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    z-index: 100;
+  }
 }
