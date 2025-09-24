@@ -6,3 +6,17 @@
   color: var(--logo-color);
   font-size: 32px;
 }
+
+.search {
+  border-radius: 9999px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

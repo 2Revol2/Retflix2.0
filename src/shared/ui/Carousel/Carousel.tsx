@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { RoutePath } from "@/shared/constants/route";
 import s from "./Carousel.module.css";
 import "@splidejs/react-splide/css";
 
@@ -35,7 +36,7 @@ export const Carousel = (props: CarouselProps) => {
     >
       {slides.map((item) => (
         <SplideSlide key={item.id}>
-          <Link href="">
+          <Link href={RoutePath.movie_details + item.id}>
             <img src={item.image} className={s.image} />
           </Link>
         </SplideSlide>

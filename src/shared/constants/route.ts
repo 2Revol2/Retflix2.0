@@ -14,12 +14,14 @@ export enum AppRoutes {
   FILMS = "films",
   SERIALS = "serials",
   CARTOONS = "cartoons",
+  SEARCH = "search",
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: "/",
   [AppRoutes.ACTOR_DETAILS]: "/actor/",
   [AppRoutes.MOVIE_DETAILS]: "/movie/",
+  [AppRoutes.SEARCH]: "/search",
   [AppRoutes.POPULAR_FILMS]: "/collections/TOP_POPULAR_MOVIES",
   [AppRoutes.TOP_250]: "/collections/TOP_250_MOVIES",
   [AppRoutes.VAMPIRE]: "/collections/VAMPIRE_THEME",

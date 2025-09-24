@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CiSearch } from "react-icons/ci";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { HStack } from "@/shared/ui/Stack";
 import { Button } from "@/shared/ui/Button/Button";
@@ -27,7 +28,11 @@ export const Header = (props: HeaderProps) => {
       </HStack>
 
       <HStack align="center" gap="16">
-        <Button variant="clear">search</Button>
+        <Button className={s.search}>
+          <Link href={RoutePath.search} className={s.link}>
+            <CiSearch size={24} />
+          </Link>
+        </Button>
         <ThemeSwitcher />
         <LanguageSwitcher />
       </HStack>
