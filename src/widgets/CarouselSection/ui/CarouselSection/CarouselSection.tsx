@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Movie, Premieres } from "@/shared/api/types";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { Carousel } from "@/shared/ui/Carousel/Carousel";
@@ -7,10 +8,11 @@ interface CarouselSectionProps {
   className?: string;
   movie: Premieres[] | Movie[];
   title?: string;
+  href?: string;
 }
 
 export const CarouselSection = (props: CarouselSectionProps) => {
-  const { className, movie, title } = props;
+  const { className, movie, title, href } = props;
 
   const movieToSlides = () => {
     return movie.map((movie) => ({
@@ -20,7 +22,13 @@ export const CarouselSection = (props: CarouselSectionProps) => {
   };
   return (
     <div className={classNames(s.wrapper, {}, [className])}>
-      <h3 className={s.title}>{title}</h3>
+      {href ? (
+        <Link href={href} className={s.link}>
+          <h3 className={s.title}>{title}</h3>
+        </Link>
+      ) : (
+        <h3 className={s.title}>{title}</h3>
+      )}
       <Carousel slides={movieToSlides()} />
     </div>
   );

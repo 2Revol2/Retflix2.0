@@ -13,3 +13,7 @@
 .icon svg {
   font-size: 25px;
 }
+
+.active {
+  color: var(--hover-color);
+}

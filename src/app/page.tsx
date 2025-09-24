@@ -1,6 +1,7 @@
 import { getMoviesCollections } from "@/shared/api/axios/collections/api";
 import { getFilms } from "@/shared/api/axios/movies/api";
 import { getMoviesPremieres } from "@/shared/api/axios/premieres/api";
+import { RoutePath } from "@/shared/constants/route";
 import { VStack } from "@/shared/ui/Stack";
 import { CarouselSection } from "@/widgets/CarouselSection";
 
@@ -23,10 +24,10 @@ const Home = async () => {
     <div>
       <VStack gap="16">
         <CarouselSection movie={premieres} title="Новинки" />
-        <CarouselSection movie={moviesTop} title="Популярные фильмы" />
-        <CarouselSection movie={films} title="Фильмы" />
-        <CarouselSection movie={serials} title="Сериалы" />
-        <CarouselSection movie={cartoons} title="Мультфильмы" />
+        <CarouselSection movie={moviesTop} title="Популярные фильмы" href={RoutePath.popular_films} />
+        <CarouselSection movie={films} title="Фильмы" href={RoutePath.films} />
+        <CarouselSection movie={serials} title="Сериалы" href={RoutePath.serials} />
+        <CarouselSection movie={cartoons} title="Мультфильмы" href={RoutePath.cartoons} />
       </VStack>
     </div>
   );

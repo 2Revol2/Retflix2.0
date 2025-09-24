@@ -2,8 +2,9 @@ import { getTranslations } from "next-intl/server";
 import { MovieList } from "@/entities/Movie";
 import { Pagination } from "@/features/Pagination";
 import { getMoviesCollections } from "@/shared/api/axios/collections/api";
+import s from "./collections.module.css";
 
-const MovieCategories = async ({
+const MovieCollections = async ({
   params,
   searchParams,
 }: {
@@ -18,11 +19,11 @@ const MovieCategories = async ({
 
   return (
     <div>
-      {t(collections)}
+      <h3 className={s.collection}>{t(collections)}</h3>
       <MovieList movies={items} />
       <Pagination totalPages={totalPages} />
     </div>
   );
 };
 
-export default MovieCategories;
+export default MovieCollections;
