@@ -8,15 +8,14 @@
     "films": "Фильмы",
     "serials": "Сериалы",
     "cartoons": "Мультфильмы",
-    "popular_films": "Популярные фильмы",
-    "popular_serials": "Популярные сериалы",
-    "top_250": "Топ 250 фильмов",
-    "vampire": "Вампиры",
-    "comics": "Комиксы",
-    "family": "Семейный",
-    "romantic": "Романтика",
-    "zombie": "Зомби",
-    "catastrophe": "Катастрофы",
-    "more": "Разное"
+    "TOP_POPULAR_MOVIES": "Популярные фильмы",
+    "POPULAR_SERIES": "Популярные сериалы",
+    "TOP_250_MOVIES": "Топ 250 фильмов",
+    "VAMPIRE_THEME": "Вампиры",
+    "COMICS_THEME": "Комиксы",
+    "FAMILY": "Семейный",
+    "LOVE_THEME": "Романтика",
+    "ZOMBIE_THEME": "Зомби",
+    "CATASTROPHE_THEME": "Катастрофы"
   }
 }

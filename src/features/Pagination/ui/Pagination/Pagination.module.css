@@ -1,0 +1,21 @@
+.pagination {
+  padding: 12px;
+  background-color: var(--secondary-background-color);
+  border-radius: 8px;
+}
+
+.list {
+  list-style: none;
+}
+
+.button {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.button.active {
+  background-color: var(--hover-color);
+  color: var(--title-color);
+  font-weight: 700;
+}

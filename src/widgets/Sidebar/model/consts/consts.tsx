@@ -27,47 +27,47 @@ export const NavbarSection: SidebarItemType[] = [
 
 export const NavbarCategories: SidebarItemType[] = [
   {
-    title: "popular_films",
+    title: "TOP_POPULAR_MOVIES",
     url: RoutePath.popular_films,
     icon: <GiStarsStack />,
   },
   {
-    title: "popular_serials",
+    title: "POPULAR_SERIES",
     url: RoutePath.poppular_serials,
     icon: <BiCameraMovie />,
   },
   {
-    title: "top_250",
+    title: "TOP_250_MOVIES",
     url: RoutePath.top_250,
     icon: <WiStars />,
   },
   {
-    title: "vampire",
+    title: "VAMPIRE_THEME",
     url: RoutePath.vampire,
     icon: <GiVampireCape />,
   },
   {
-    title: "comics",
+    title: "COMICS_THEME",
     url: RoutePath.comics,
     icon: <MdMenuBook />,
   },
   {
-    title: "family",
+    title: "FAMILY",
     url: RoutePath.family,
     icon: <MdFamilyRestroom />,
   },
   {
-    title: "romantic",
+    title: "LOVE_THEME",
     url: RoutePath.romantic,
     icon: <FaHeart />,
   },
   {
-    title: "zombie",
+    title: "ZOMBIE_THEME",
     url: RoutePath.zombie,
     icon: <GiShamblingZombie />,
   },
   {
-    title: "catastrophe",
+    title: "CATASTROPHE_THEME",
     url: RoutePath.catastrophe,
     icon: <GiNuclearBomb />,
   },
