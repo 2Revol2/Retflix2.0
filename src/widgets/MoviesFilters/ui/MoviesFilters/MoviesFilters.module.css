@@ -1,0 +1,12 @@
+.filtersWrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+@media (width <= 950px) {
+  .filtersWrapper {
+    flex-direction: column;
+    align-items: start;
+  }
+}

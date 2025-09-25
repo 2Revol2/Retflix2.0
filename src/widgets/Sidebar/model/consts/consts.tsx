@@ -9,17 +9,17 @@ import type { SidebarItemType } from "../types/types";
 
 export const NavbarSection: SidebarItemType[] = [
   {
-    title: "films",
+    title: "FILM",
     url: RoutePath.films,
     icon: <BiMoviePlay />,
   },
   {
-    title: "serials",
+    title: "TV_SERIES",
     url: RoutePath.serials,
     icon: <FaTv />,
   },
   {
-    title: "cartoons",
+    title: "CARTOONS",
     url: RoutePath.cartoons,
     icon: <GiMagicHat />,
   },

@@ -54,3 +54,8 @@
   border: none;
   padding: 0;
 }
+
+.disabled {
+  opacity: 0.7;
+  pointer-events: none;
+}

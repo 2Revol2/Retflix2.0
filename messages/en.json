@@ -5,9 +5,9 @@
     "Watch": "Watch"
   },
   "Sidebar": {
-    "films": "Movies",
-    "serials": "TV Shows",
-    "cartoons": "Cartoons",
+    "FILM": "Movies",
+    "TV_SERIES": "TV Shows",
+    "CARTOONS": "Cartoons",
     "TOP_POPULAR_MOVIES": "Popular Movies",
     "POPULAR_SERIES": "Popular TV Shows",
     "TOP_250_MOVIES": "Top 250 Movies",

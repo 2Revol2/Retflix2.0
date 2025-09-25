@@ -6,6 +6,14 @@ interface Genre {
   genre: string;
 }
 
+export interface CountryWithId extends Country {
+  id: number;
+}
+
+export interface GenreWithId extends Genre {
+  id: number;
+}
+
 interface BaseMovie {
   kinopoiskId: number;
   nameRu: string;
@@ -26,4 +34,9 @@ export interface Movie extends BaseMovie {
   ratingKinopoisk: number;
   ratingImbd: number;
   nameOriginal: string;
+}
+
+export interface FiltersResponce {
+  countries: CountryWithId[];
+  genres: GenreWithId[];
 }

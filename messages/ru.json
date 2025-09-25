@@ -5,9 +5,9 @@
     "Watch": "Смотреть"
   },
   "Sidebar": {
-    "films": "Фильмы",
-    "serials": "Сериалы",
-    "cartoons": "Мультфильмы",
+    "FILM": "Фильмы",
+    "TV_SERIES": "Сериалы",
+    "CARTOONS": "Мультфильмы",
     "TOP_POPULAR_MOVIES": "Популярные фильмы",
     "POPULAR_SERIES": "Популярные сериалы",
     "TOP_250_MOVIES": "Топ 250 фильмов",

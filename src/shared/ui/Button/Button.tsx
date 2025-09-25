@@ -18,7 +18,7 @@ export const Button = (props: ButtonProps) => {
   };
 
   return (
-    <button {...otherProps} className={classNames(s.button, mods, [className, s[variant]])}>
+    <button {...otherProps} disabled={disabled} className={classNames(s.button, mods, [className, s[variant]])}>
       {children}
     </button>
   );
