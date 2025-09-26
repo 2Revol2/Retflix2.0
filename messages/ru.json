@@ -16,6 +16,13 @@
     "FAMILY": "Семейный",
     "LOVE_THEME": "Романтика",
     "ZOMBIE_THEME": "Зомби",
-    "CATASTROPHE_THEME": "Катастрофы"
+    "CATASTROPHE_THEME": "Катастрофы",
+    "Premieres": "Премьеры"
+  },
+  "Filters": {
+    "Country": "Страна",
+    "Genre": "Жанр",
+    "Year": "Год",
+    "Reset": "Сбросить фильтры"
   }
 }

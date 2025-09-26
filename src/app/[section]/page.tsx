@@ -10,16 +10,17 @@ const MovieSection = async ({
   searchParams,
 }: {
   params: Promise<{ section: string }>;
-  searchParams: { [key: string]: number | undefined };
+  searchParams: Promise<{ [key: string]: number | undefined }>;
 }) => {
   const { section } = await params;
+  const sp = await searchParams;
   const t = await getTranslations("Sidebar");
-  const page = searchParams["page"] ?? 1;
-  const country = searchParams["country"];
+  const page = sp["page"] ?? 1;
+  const country = sp["country"];
   const movieType = section === "CARTOONS" ? undefined : section;
-  const genreId = section === "CARTOONS" ? 18 : searchParams.genre;
+  const genreId = section === "CARTOONS" ? 18 : sp["genre"];
 
-  const year = searchParams["year"];
+  const year = sp["year"];
   const { items: movies, totalPages } = await getFilms({
     page,
     type: movieType,

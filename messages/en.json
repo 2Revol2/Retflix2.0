@@ -16,6 +16,13 @@
     "FAMILY": "Family",
     "LOVE_THEME": "Romance",
     "ZOMBIE_THEME": "Zombies",
-    "CATASTROPHE_THEME": "Disasters"
+    "CATASTROPHE_THEME": "Disasters",
+    "Premieres": "Premieres"
+  },
+  "Filters": {
+    "Country": "Country",
+    "Genre": "Genre",
+    "Year": "Year",
+    "Reset": "Reset filters"
   }
 }
