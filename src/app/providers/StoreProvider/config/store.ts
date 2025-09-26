@@ -1,11 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { toggleSidebarReducer } from "@/features/ToggleSidebar";
+import { rtkApi } from "@/shared/api/rtkApi/rtkApi";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       toggleSidebar: toggleSidebarReducer,
+      [rtkApi.reducerPath]: rtkApi.reducer,
     },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(rtkApi.middleware),
   });
 };
 

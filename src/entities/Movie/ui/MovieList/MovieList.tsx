@@ -6,14 +6,14 @@ import s from "./MovieList.module.css";
 
 interface MovieListProps {
   className?: string;
-  movies: Movie[];
+  movies?: Movie[];
 }
 
 export const MovieList = (props: MovieListProps) => {
   const { className, movies } = props;
   return (
     <HStack align="center" justify="center" gap="16" className={classNames(s.MovieList, {}, [className])}>
-      {movies.map((movie) => (
+      {movies?.map((movie) => (
         <MovieItem movie={movie} key={movie.kinopoiskId} />
       ))}
     </HStack>

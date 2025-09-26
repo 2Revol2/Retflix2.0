@@ -24,5 +24,8 @@
     "Genre": "Genre",
     "Year": "Year",
     "Reset": "Reset filters"
+  },
+  "Search": {
+    "Search": "Search"
   }
 }

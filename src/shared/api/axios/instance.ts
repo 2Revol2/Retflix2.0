@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = process.env.NEXT_KINIPOISK_BASE_URL;
-const API_KEY = process.env.NEXT_KINOPOISK_API_KEY;
+const BASE_URL = process.env.NEXT_PUBLIC_KINIPOISK_BASE_URL;
+const API_KEY = process.env.NEXT_PUBLIC_KINOPOISK_API_KEY;
 
 function createInstance() {
   const instance = axios.create({

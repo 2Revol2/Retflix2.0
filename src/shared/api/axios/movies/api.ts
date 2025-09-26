@@ -9,7 +9,7 @@ interface GetFilmsParams {
   type?: string;
   year?: number;
   page?: number;
-  keywords?: string;
+  keyword?: string;
 }
 
 export const getFilms = async ({
@@ -19,7 +19,7 @@ export const getFilms = async ({
   type,
   page = 1,
   year,
-  keywords,
+  keyword,
 }: GetFilmsParams = {}) =>
   (
     await baseInstance.get<MoviesResponse>("v2.2/films", {
@@ -31,7 +31,7 @@ export const getFilms = async ({
         page,
         yearFrom: year,
         yearTo: year,
-        keywords,
+        keyword,
       },
     })
   ).data;
