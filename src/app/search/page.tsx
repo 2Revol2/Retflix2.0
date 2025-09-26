@@ -1,28 +1,18 @@
-"use client";
-import { useState } from "react";
-import { useTranslations } from "next-intl";
-import { Input } from "@/shared/ui/Input/Input";
-import { useDebounce } from "@/shared/hooks/useDebounce";
 import { MovieList } from "@/entities/Movie";
 import { Pagination } from "@/features/Pagination";
 import { VStack } from "@/shared/ui/Stack";
-import { useSearchMovies } from "./api/searchApi";
+import { Search } from "@/features/Search/ui/Search/Search";
+import { getFilms } from "@/shared/api/axios/movies/api";
 
-interface SearchPageProps {
-  page: number;
-}
-
-const SearchPage = ({ page }: SearchPageProps) => {
-  const [keyword, setKeyword] = useState("");
-  const debouncedKeywords = useDebounce(keyword, 2000);
-  const { data } = useSearchMovies({ keyword: debouncedKeywords, page });
-  const t = useTranslations("Search");
-
+const SearchPage = async ({ searchParams }: { searchParams: { [key: string]: string | undefined } }) => {
+  const keyword = searchParams["keyword"] ?? "";
+  const page = Number(searchParams["page"] ?? 1);
+  const { items, totalPages } = await getFilms({ keyword: keyword, page });
   return (
     <VStack gap="16" max align="center">
-      <Input value={keyword} onChange={setKeyword} placeholder={t("Search")} />
-      <MovieList movies={data?.items} />
-      <Pagination totalPages={data?.totalPages || 1} />
+      <Search />
+      <MovieList movies={items} />
+      <Pagination totalPages={totalPages} />
     </VStack>
   );
 };
