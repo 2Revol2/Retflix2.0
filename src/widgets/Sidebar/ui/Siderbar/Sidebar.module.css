@@ -13,6 +13,11 @@
 }
 
 @media (width <= 500px) {
+  .siderbar {
+    width: var(--sidebar-closed-width-mobile);
+    padding: 5px;
+  }
+
   .isOpen {
     width: 100%;
     position: fixed;
