@@ -40,3 +40,13 @@ export interface FiltersResponce {
   countries: CountryWithId[];
   genres: GenreWithId[];
 }
+
+export interface MovieDetails extends BaseMovie {
+  coverUrl: string;
+  year: number;
+  filmLength: number;
+  ratingImdb: number;
+  ratingKinopoisk: number;
+  description: string;
+  slogan: string;
+}

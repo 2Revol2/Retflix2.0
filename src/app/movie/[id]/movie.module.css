@@ -1,0 +1,75 @@
+.imageWrapper {
+  max-width: 400px;
+}
+
+.info {
+  max-width: 700px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: var(--logo-color);
+  letter-spacing: 2px;
+}
+
+.kinopoisk {
+  color: var(--hover-color);
+}
+
+.imdb {
+  color: var(--logo-color);
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 5px 16px;
+  align-items: start;
+  width: 100%;
+}
+
+.movieInfo {
+  display: flex;
+  gap: 32px;
+}
+
+@media (width <= 768px) {
+  .movieInfo {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .imageWrapper {
+    max-width: 100%;
+  }
+
+  .info {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}
+
+@media (width >= 768px) and (width <= 1050px) {
+  .movieInfo {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .imageWrapper {
+    flex: 0 0 40%;
+  }
+
+  .info {
+    flex: 1;
+    max-width: none;
+  }
+}
