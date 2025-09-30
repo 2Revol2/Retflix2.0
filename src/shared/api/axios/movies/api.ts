@@ -1,6 +1,5 @@
-import { FiltersResponce } from "../../types";
 import { baseInstance } from "../instance";
-import type { MoviesResponse } from "./types";
+import type { FiltersResponce, MoviesResponse } from "./types";
 
 interface GetFilmsParams {
   countries?: number;

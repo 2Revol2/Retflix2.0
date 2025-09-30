@@ -1,14 +1,20 @@
 import { getTranslations } from "next-intl/server";
-import { getFilm } from "@/shared/api/axios/movie/api";
+import { getFilm, getSimilars } from "@/shared/api/axios/movie/api";
 import { HStack, VStack } from "@/shared/ui/Stack";
 import { MovieInfo } from "@/entities/Movie";
 import { VideoPlayer } from "@/widgets/VideoPlayer";
+import { CarouselSection } from "@/widgets/CarouselSection";
 import s from "./movie.module.css";
 
 const MovieDetails = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
-  const movie = await getFilm(id);
   const t = await getTranslations("MovieDetails");
+  const movie = await getFilm(id);
+  const { items: similars } = await getSimilars(id);
+
+  const similarsToSlides = () => {
+    return similars.map((movie) => ({ id: movie.filmId, image: movie.posterUrl }));
+  };
 
   return (
     <VStack gap="16">
@@ -39,6 +45,9 @@ const MovieDetails = async ({ params }: { params: Promise<{ id: string }> }) => 
         <h3>{t("watchOnline")}</h3>
         <VideoPlayer />
       </VStack>
+      {similars.length > 0 && (
+        <CarouselSection slides={similarsToSlides()} type="movieDetails" title="Вам могут понравится" />
+      )}
     </VStack>
   );
 };
