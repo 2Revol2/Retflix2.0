@@ -46,7 +46,7 @@ const MovieDetails = async ({ params }: { params: Promise<{ id: string }> }) => 
         <VideoPlayer />
       </VStack>
       {similars.length > 0 && (
-        <CarouselSection slides={similarsToSlides()} type="movieDetails" title="Вам могут понравится" />
+        <CarouselSection slides={similarsToSlides()} type="movieDetails" title={t("youMayLike")} />
       )}
     </VStack>
   );

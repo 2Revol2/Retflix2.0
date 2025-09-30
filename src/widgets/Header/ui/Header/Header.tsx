@@ -22,12 +22,12 @@ export const Header = (props: HeaderProps) => {
         <ToggleSidebar />
         <h1>
           <Link className={s.logo} href={RoutePath.main}>
-            ReTflix
+            ReMovie
           </Link>
         </h1>
       </HStack>
 
-      <HStack align="center" gap="16">
+      <HStack align="center" gap="8">
         <Button className={s.search}>
           <Link href={RoutePath.search} className={s.link}>
             <CiSearch size={24} />
