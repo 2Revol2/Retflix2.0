@@ -27,5 +27,16 @@
   },
   "Search": {
     "Search": "Search"
+  },
+  "MovieDetails": {
+    "year": "Year",
+    "country": "Country",
+    "genre": "Genre",
+    "duration": "Duration",
+    "description": "Description",
+    "watchOnline": "Watch Online",
+    "kinopoisk": "Kinopoisk",
+    "imdb": "IMDB",
+    "min": "min."
   }
 }

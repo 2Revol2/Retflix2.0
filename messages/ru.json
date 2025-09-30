@@ -27,5 +27,16 @@
   },
   "Search": {
     "Search": "Поиск"
+  },
+  "MovieDetails": {
+    "year": "Год",
+    "country": "Страна",
+    "genre": "Жанр",
+    "duration": "Длительность",
+    "description": "Описание",
+    "watchOnline": "Смотреть онлайн",
+    "kinopoisk": "КиноПоиск",
+    "imdb": "IMDB",
+    "min": "мин."
   }
 }
