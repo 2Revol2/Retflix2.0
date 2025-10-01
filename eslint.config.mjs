@@ -70,6 +70,7 @@ const eslintConfig = [
       "react/jsx-props-no-spreading": "warn",
       "react/function-component-definition": ["warn", { namedComponents: "arrow-function" }],
       "react/no-unused-prop-types": "error",
+      "react/display-name": "off",
     },
   },
   {

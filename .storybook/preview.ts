@@ -1,4 +1,8 @@
 import type { Preview } from "@storybook/nextjs-vite";
+import { ThemeDecorator } from "../src/shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { StyleDecorator } from "../src/shared/config/storybook/StyleDecorator/StyleDecorator";
+import { TranslationsDecorator } from "../src/shared/config/storybook/TranslationsDecorator/TranslationsDecorator";
+import { Theme } from "../src/app/providers/ThemeProvider";
 
 const preview: Preview = {
   parameters: {
@@ -10,12 +14,10 @@ const preview: Preview = {
     },
 
     a11y: {
-      // 'todo' - show a11y violations in the test UI only
-      // 'error' - fail CI on a11y violations
-      // 'off' - skip a11y checks entirely
       test: "todo",
     },
   },
+  decorators: [StyleDecorator, ThemeDecorator(Theme.LIGHT), TranslationsDecorator],
 };
 
 export default preview;
