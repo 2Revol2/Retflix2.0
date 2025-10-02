@@ -9,11 +9,11 @@
 
 .primary {
   background-color: var(--background-color);
-  color: var(--text);
+  color: var(--text-color);
 
   &:hover {
     background-color: var(--hover-color);
-    color: var(--title);
+    color: var(--title-color);
   }
 
   &:active {
@@ -23,7 +23,7 @@
 
 .secondary {
   background-color: var(--secondary-background-color);
-  color: var(--title);
+  color: var(--title-color);
 
   &:hover {
     background-color: var(--hover-color);
@@ -37,7 +37,7 @@
 
 .outline {
   background-color: transparent;
-  color: var(--title);
+  color: var(--title-color);
   border: 1px solid var(--title-color);
 
   &:hover {
