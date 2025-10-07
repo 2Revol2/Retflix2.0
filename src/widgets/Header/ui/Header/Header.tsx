@@ -22,7 +22,7 @@ export const Header = (props: HeaderProps) => {
         <ToggleSidebar />
         <h1>
           <Link className={s.logo} href={RoutePath.main}>
-            ReMovie
+            Retflix
           </Link>
         </h1>
       </HStack>
