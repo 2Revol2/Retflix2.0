@@ -15,6 +15,7 @@ export enum AppRoutes {
   SERIALS = "serials",
   CARTOONS = "cartoons",
   SEARCH = "search",
+  CHAT = "chat",
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
@@ -34,4 +35,5 @@ export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.FILMS]: "/FILM",
   [AppRoutes.SERIALS]: "/TV_SERIES",
   [AppRoutes.CARTOONS]: "/CARTOONS",
+  [AppRoutes.CHAT]: "/chat",
 };
