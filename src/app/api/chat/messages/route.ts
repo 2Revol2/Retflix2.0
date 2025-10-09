@@ -5,7 +5,14 @@ import { prisma } from "@/prisma/prismaClient";
 export async function GET() {
   const messages = await prisma.message.findMany({
     orderBy: { createdAt: "asc" },
-    take: 10,
+    include: {
+      author: {
+        select: {
+          username: true,
+          createdAt: true,
+        },
+      },
+    },
   });
 
   return NextResponse.json(messages);

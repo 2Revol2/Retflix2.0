@@ -17,7 +17,8 @@
     "LOVE_THEME": "Romance",
     "ZOMBIE_THEME": "Zombies",
     "CATASTROPHE_THEME": "Disasters",
-    "Premieres": "Premieres"
+    "Premieres": "Premieres",
+    "Chat": "Chat"
   },
   "Filters": {
     "Country": "Country",

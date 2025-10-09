@@ -20,7 +20,7 @@ export const Sidebar = (props: SidebarProps) => {
 
   return (
     <aside className={classNames(s.siderbar, { [s.isOpen]: isOpen }, [className])}>
-      <VStack gap="16" align={isOpen ? undefined : "center"} max as={"nav"}>
+      <VStack gap="8" align={isOpen ? undefined : "center"} max as={"nav"}>
         {NavbarCategories.map((item) => (
           <SidebarItem item={item} key={item.url} isOpen={isOpen} />
         ))}

@@ -9,11 +9,12 @@
     width: 100%;
     z-index: 100;
     background: rgb(0 0 0 / 50%);
+    border-radius: 8px;
 }
 
 .chat {
     position: relative;
-    height: calc(100vh - var(--navbar-height) - 10px);
+    height: calc(100vh - var(--navbar-height) - 20px);
 }
 
 .logoutButton {
