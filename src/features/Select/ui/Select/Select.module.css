@@ -12,7 +12,7 @@
     border-radius: 6px;
     max-height: 250px;
     overflow-y: auto;
-    z-index: var(--z-index--dropdown);
+    z-index: var(--z-index-dropdown);
 }
 
 .option {
