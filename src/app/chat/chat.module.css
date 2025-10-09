@@ -15,3 +15,11 @@
     position: relative;
     height: calc(100vh - var(--navbar-height) - 10px);
 }
+
+.logoutButton {
+    background-color: var(--hover-color);
+}
+
+.title {
+    font-size: 24px;
+}

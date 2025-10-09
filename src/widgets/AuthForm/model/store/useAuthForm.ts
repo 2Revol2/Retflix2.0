@@ -7,7 +7,6 @@ export const useAuthForm = create<authFormStore>((set, get) => ({
   authMode: "login",
   error: "",
   isLoading: false,
-  isSuccess: false,
 
   setUsername: (username) =>
     set((state) => ({
@@ -50,7 +49,8 @@ export const useAuthForm = create<authFormStore>((set, get) => ({
     try {
       const authFunction = authMode === "login" ? login : register;
       await authFunction(formData.username, formData.password);
-      set({ isSuccess: true, isLoading: false });
+      set({ isLoading: false });
+      window.location.reload();
     } catch (error: any) {
       set({ error: error.response?.data?.message || "Network error", isLoading: false });
     }

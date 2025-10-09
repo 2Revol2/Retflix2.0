@@ -15,6 +15,5 @@ export interface authFormStore {
   setAuthMode: (authMode: AuthMode) => void;
   error: string;
   isLoading: boolean;
-  isSuccess: boolean;
-  submitForm: () => Promise<void>;
+  submitForm: () => void;
 }

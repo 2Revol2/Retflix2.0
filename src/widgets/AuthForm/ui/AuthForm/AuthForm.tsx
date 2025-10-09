@@ -13,20 +13,8 @@ interface AuthFormProps {
 
 export const AuthForm = (props: AuthFormProps) => {
   const { className } = props;
-  const {
-    formData,
-    setUsername,
-    setPassword,
-    setSubmitPassword,
-    authMode,
-    setAuthMode,
-    error,
-    isLoading,
-    isSuccess,
-    submitForm,
-  } = useAuthForm();
-
-  if (isSuccess) return null;
+  const { formData, setUsername, setPassword, setSubmitPassword, authMode, setAuthMode, error, isLoading, submitForm } =
+    useAuthForm();
 
   return (
     <div className={classNames(s.authForm, {}, [className])}>
