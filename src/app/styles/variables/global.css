@@ -1,6 +1,9 @@
 :root {
-  --navbar-height: 68px;
-  --sidebar-width: 250px;
-  --sidebar-closed-width: 80px;
-  --sidebar-closed-width-mobile: 40px;
+    --navbar-height: 68px;
+    --sidebar-width: 250px;
+    --sidebar-closed-width: 80px;
+    --sidebar-closed-width-mobile: 40px;
+    --z-index-sidebar: 30;
+    --z-index-auth-modal: 20;
+    --z-index--dropdown: 10;
 }

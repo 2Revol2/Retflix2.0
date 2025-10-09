@@ -1,28 +1,28 @@
 .siderbar {
-  background-color: var(--secondary-background-color);
-  min-height: calc(100vh - var(--navbar-height));
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  width: var(--sidebar-closed-width);
-  padding: 5px 15px;
-  transition: all 0.2s ease-out;
+    background-color: var(--secondary-background-color);
+    min-height: calc(100vh - var(--navbar-height));
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: var(--sidebar-closed-width);
+    padding: 5px 15px;
+    transition: all 0.2s ease-out;
 }
 
 .isOpen {
-  width: var(--sidebar-width);
+    width: var(--sidebar-width);
 }
 
 @media (width <= 500px) {
-  .siderbar {
-    width: var(--sidebar-closed-width-mobile);
-    padding: 5px;
-  }
+    .siderbar {
+        width: var(--sidebar-closed-width-mobile);
+        padding: 5px;
+    }
 
-  .isOpen {
-    width: 100%;
-    position: fixed;
-    top: var(--navbar-height);
-    left: 0;
-    z-index: 100;
-  }
+    .isOpen {
+        width: 100%;
+        position: fixed;
+        top: var(--navbar-height);
+        left: 0;
+        z-index: var(--z-index-sidebar);
+    }
 }
