@@ -1,0 +1,17 @@
+.authForm {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background: rgb(0 0 0 / 50%);
+}
+
+.chat {
+    position: relative;
+    height: calc(100vh - var(--navbar-height) - 10px);
+}
