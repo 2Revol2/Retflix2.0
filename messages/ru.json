@@ -40,5 +40,21 @@
     "imdb": "IMDB",
     "min": "мин.",
     "youMayLike": "Вам могут понравится"
+  },
+  "ChatPage": {
+    "MovieBuffsChat": "Чат киноманов",
+    "EnterMessage": "Введите сообщение",
+    "Send": "Отправить",
+    "Logout": "Выйти"
+  },
+  "AuthForm": {
+    "Username": "Имя пользователя",
+    "Password": "Пароль",
+    "RepeatPassword": "Повторите пароль",
+    "DontHaveAccount": "Нет аккаунта? Зарегистрируйтесь",
+    "HaveAccount": "Уже есть аккаунт? Войдите",
+    "Login": "Войти",
+    "Register": "Зарегистрироваться",
+    "Loading": "Загрузка..."
   }
 }

@@ -1,4 +1,5 @@
 import { cookies } from "next/headers";
+import { getTranslations } from "next-intl/server";
 import { AuthForm } from "@/widgets/AuthForm";
 import { LogoutButton } from "@/app/chat/ui/LogoutButton/LogoutButton";
 import { HStack, VStack } from "@/shared/ui/Stack";
@@ -9,7 +10,7 @@ import s from "./chat.module.css";
 const ChatPage = async () => {
   const cookieStore = await cookies();
   const token = cookieStore.get("token");
-
+  const t = await getTranslations("ChatPage");
   let user: User | undefined = undefined;
   if (token) {
     try {
@@ -21,13 +22,17 @@ const ChatPage = async () => {
   }
 
   if (!user) {
-    return <AuthForm className={s.authForm} />;
+    return (
+      <div className={s.chat}>
+        <AuthForm className={s.authForm} />
+      </div>
+    );
   }
 
   return (
     <VStack max className={s.chat} gap={"8"}>
       <HStack justify={"between"} max align={"center"}>
-        <h3 className={s.title}>Movie buffs chat</h3>
+        <h3 className={s.title}>{t("MovieBuffsChat")}</h3>
         {user && <LogoutButton className={s.logoutButton} />}
       </HStack>
       <Chat user={user} />

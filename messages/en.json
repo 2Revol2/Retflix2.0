@@ -40,5 +40,21 @@
     "imdb": "IMDB",
     "min": "min.",
     "youMayLike": "You may like"
+  },
+  "ChatPage": {
+    "MovieBuffsChat": "Movie buffs chat",
+    "EnterMessage": "Enter message",
+    "Send": "Send",
+    "Logout": "Logout"
+  },
+  "AuthForm": {
+    "Username": "Username",
+    "Password": "Password",
+    "RepeatPassword": "Repeat password",
+    "DontHaveAccount": "Don't have an account? Register",
+    "HaveAccount": "Already have an account? Login",
+    "Login": "Login",
+    "Register": "Register",
+    "Loading": "Loading..."
   }
 }

@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useTranslations } from "next-intl";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { VStack } from "@/shared/ui/Stack";
 import { Input } from "@/shared/ui/Input/Input";
@@ -15,15 +16,16 @@ export const AuthForm = (props: AuthFormProps) => {
   const { className } = props;
   const { formData, setUsername, setPassword, setSubmitPassword, authMode, setAuthMode, error, isLoading, submitForm } =
     useAuthForm();
+  const t = useTranslations("AuthForm");
 
   return (
     <div className={classNames(s.authForm, {}, [className])}>
       <VStack gap={"16"} className={s.inside}>
-        <Input placeholder="username" value={formData.username} onChange={setUsername} />
-        <Input placeholder="password" type="password" value={formData.password} onChange={setPassword} />
+        <Input placeholder={t("Username")} value={formData.username} onChange={setUsername} />
+        <Input placeholder={t("Password")} type="password" value={formData.password} onChange={setPassword} />
         {authMode === "register" && (
           <Input
-            placeholder="repeat password"
+            placeholder={t("RepeatPassword")}
             type="password"
             value={formData.submitPassword}
             onChange={setSubmitPassword}
@@ -32,16 +34,16 @@ export const AuthForm = (props: AuthFormProps) => {
         {error && <div style={{ color: "red" }}>{error}</div>}
         {authMode === "login" && (
           <Button variant={"clear"} className={s.register} onClick={() => setAuthMode("register")}>
-            dont have an account? register
+            {t("DontHaveAccount")}
           </Button>
         )}
         {authMode === "register" && (
           <Button variant={"clear"} className={s.register} onClick={() => setAuthMode("login")}>
-            you have an account? login
+            {t("HaveAccount")}
           </Button>
         )}
         <Button variant={"outline"} style={{ width: "100%" }} onClick={submitForm} disabled={isLoading}>
-          <span>{isLoading ? "Loading..." : authMode === "login" ? "login" : "register"}</span>
+          <span>{isLoading ? t("Loading") : authMode === "login" ? t("Login") : t("Register")}</span>
         </Button>
       </VStack>
     </div>
