@@ -7,6 +7,7 @@ import "./styles/index.css";
 import { Header } from "@/widgets/Header";
 import { Sidebar } from "@/widgets/Sidebar";
 import { ThemeProvider } from "./providers/ThemeProvider";
+import { QueryProvider } from "./providers/QueryProvider";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -55,13 +56,15 @@ const RootLayout = async ({
     <html lang="en">
       <body className={classNames("", {}, [poppins.variable])}>
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <ThemeProvider>
-            <Header />
-            <div className="content_wrapper">
-              <Sidebar />
-              <div className={"content"}>{children}</div>
-            </div>
-          </ThemeProvider>
+          <QueryProvider>
+            <ThemeProvider>
+              <Header />
+              <div className="content_wrapper">
+                <Sidebar />
+                <div className={"content"}>{children}</div>
+              </div>
+            </ThemeProvider>
+          </QueryProvider>
         </NextIntlClientProvider>
       </body>
     </html>

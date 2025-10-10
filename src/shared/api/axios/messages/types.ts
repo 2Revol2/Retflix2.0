@@ -7,3 +7,9 @@ export interface Message {
     username: string;
   };
 }
+// export interface MessageResponse {
+//   messages: Message[];
+//   hasMore: boolean;
+//   page: number;
+//   limit: number;
+// }
