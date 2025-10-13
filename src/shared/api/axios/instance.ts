@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const MOVIE_BASE_URL = process.env.NEXT_PUBLIC_KINIPOISK_BASE_URL;
+const MOVIE_BASE_URL = process.env.NEXT_PUBLIC_KINOPOISK_BASE_URL;
 const API_KEY = process.env.NEXT_PUBLIC_KINOPOISK_API_KEY;
 const USER_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
