@@ -6,6 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
+    "prisma:generate": "npx prisma generate --schema=./src/prisma/schema.prisma",
     "lint": "npx eslint \"**/*.{ts,tsx}\" && npx stylelint  \"**/*.css\"",
     "prepare": "husky",
     "storybook": "storybook dev -p 6006",
