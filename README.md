@@ -13,8 +13,6 @@ Enjoy a sleek, modern, and fully responsive interface for discovering, watching 
 Retflix is built using a modern and efficient technology stack to ensure high performance, scalability, and
 maintainability.
 
----
-
 - **Next.js** — for server-side rendering and routing
 - **React** — for building fast and interactive UI components
 - **Zustand** — for lightweight and flexible state management
