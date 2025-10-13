@@ -29,5 +29,19 @@ export async function POST(req: NextRequest) {
     data: { text, authorId },
   });
 
+  const count = await prisma.message.count();
+
+  if (count > 100) {
+    const oldestMessage = await prisma.message.findFirst({
+      orderBy: { createdAt: "asc" },
+    });
+
+    if (oldestMessage) {
+      await prisma.message.delete({
+        where: { id: oldestMessage.id },
+      });
+    }
+  }
+
   return NextResponse.json(newMessage, { status: 200 });
 }

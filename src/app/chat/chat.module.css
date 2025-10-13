@@ -14,7 +14,7 @@
 
 .chat {
     position: relative;
-    height: calc(100vh - var(--navbar-height) - 20px);
+    height: 100%;
 }
 
 .logoutButton {
